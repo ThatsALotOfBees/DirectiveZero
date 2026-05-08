@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DIRECTIVE ZERO</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #050507;
+    color: #b347ff;
+    overflow: hidden;
+    height: 100%;
+    font-family: 'Courier New', monospace;
+  }
+  #game {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: radial-gradient(ellipse at center, #0a0a14 0%, #050507 80%);
+  }
+  canvas {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    box-shadow: 0 0 60px rgba(179, 71, 255, 0.15);
+  }
+</style>
+</head>
+<body>
+<div id="game"></div>
+<script type="module" src="/main.js"></script>
+</body>
+</html>

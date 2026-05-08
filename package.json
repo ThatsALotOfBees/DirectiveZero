@@ -1,0 +1,48 @@
+{
+  "name": "directive-zero",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron": "electron .",
+    "package": "vite build && electron-packager . \"Directive Zero\" --platform=win32 --arch=x64 --out=release --overwrite --prune=true --asar"
+  },
+  "devDependencies": {
+    "@electron/packager": "^20.0.0",
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "phaser": "^3.80.1",
+    "vite": "^5.4.10"
+  },
+  "build": {
+    "appId": "com.directive.zero",
+    "productName": "Directive Zero",
+    "asar": true,
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "Directive Zero.exe"
+    },
+    "portable": {
+      "artifactName": "Directive Zero.exe"
+    }
+  }
+}

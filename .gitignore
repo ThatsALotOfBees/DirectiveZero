@@ -1,0 +1,12 @@
+node_modules/
+dist/
+release/
+electron-out.log
+electron-err.log
+pkg-out.log
+pkg-err.log
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
